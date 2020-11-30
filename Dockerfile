@@ -2,7 +2,7 @@
 FROM node:13
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /udagram/user-api
 
 # Install app dependencies by copying
 # package.json and package-lock.json
@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Bind the port that the image will run on
-EXPOSE 8080
+EXPOSE 8082
 
 # Define the Docker image's behavior at runtime
 CMD ["node", "server.js"]
